@@ -101,7 +101,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="text-center text-white px-6">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  PhotoVault
+                  Revamping
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto">
                   Professional image gallery platform for photographers and creatives
