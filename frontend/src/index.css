@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Image Gallery Design System */
+
+@layer base {
+  :root {
+    /* Core palette - Professional photography theme */
+    --background: 220 15% 97%;
+    --foreground: 220 15% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 8%;
+
+    /* Primary - Deep photography blue */
+    --primary: 220 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 85% 35%;
+
+    /* Secondary - Elegant neutral */
+    --secondary: 220 10% 92%;
+    --secondary-foreground: 220 15% 8%;
+
+    /* Muted */
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 5% 45%;
+
+    /* Accent - Creative purple */
+    --accent: 270 75% 60%;
+    --accent-foreground: 0 0% 98%;
+    --accent-soft: 270 50% 90%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 220 10% 88%;
+    --input: 220 10% 96%;
+    --ring: 220 85% 25%;
+
+    /* Gallery specific */
+    --gallery-bg: 220 15% 98%;
+    --overlay-dark: 220 15% 8%;
+    --glass-bg: 220 15% 98%;
+
+    /* Status */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 85%, 25%) 0%, hsl(270, 75%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 10%, 98%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(220, 15%, 98% / 0.9) 0%, hsl(220, 10%, 95% / 0.8) 100%);
+    --gradient-overlay: linear-gradient(0deg, hsl(220, 15%, 8% / 0.8) 0%, transparent 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(220, 15%, 8% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(220, 15%, 8% / 0.12);
+    --shadow-strong: 0 15px 40px hsl(220, 15%, 8% / 0.15);
+    --shadow-glow: 0 0 30px hsl(220, 85%, 25% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* ✅ PALETTE EDITOR VARIABLES - THEME CUSTOMIZATION */
+    
+    /* Primary Colors */
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-primary-active: #1d4ed8;
+    --color-secondary: #64748b;
+    --color-secondary-hover: #475569;
+    
+    /* Background Colors */
+    --color-background: #ffffff;
+    --color-card-background: #f8fafc;
+    --color-header-background: #ffffff;
+    --color-overlay-background: rgba(0, 0, 0, 0.8);
+    
+    /* Text Colors */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-muted: #94a3b8;
+    --color-text-inverse: #ffffff;
+    
+    /* UI Elements */
+    --color-border: #e2e8f0;
+    --color-border-hover: #cbd5e1;
+    --color-link: #3b82f6;
+    --color-link-hover: #2563eb;
+    
+    /* Status Colors */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #06b6d4;
+    
+    /* Gallery Specific */
+    --color-image-background: #f1f5f9;
+    --color-lightbox-overlay: rgba(0, 0, 0, 0.9);
+    --color-badge-background: #e2e8f0;
+    --color-highlight-color: #fbbf24;
+  }
+
+  .dark {
+    /* Dark mode overrides */
+    --background: 220 15% 8%;
+    --foreground: 220 15% 95%;
+    --card: 220 15% 10%;
+    --card-foreground: 220 15% 95%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 220 85% 65%;
+    --primary-foreground: 220 15% 8%;
+    --primary-glow: 220 85% 75%;
+
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 5% 60%;
+
+    --accent: 270 75% 70%;
+    --accent-foreground: 220 15% 8%;
+    --accent-soft: 270 50% 20%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 220 15% 8%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 15%;
+    --ring: 220 85% 65%;
+
+    --gallery-bg: 220 15% 6%;
+    --overlay-dark: 0 0% 95%;
+    --glass-bg: 220 15% 8%;
+
+    --success: 142 76% 50%;
+    --warning: 38 92% 60%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220, 85%, 25%) 0%, hsl(270, 75%, 40%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 15%, 10%) 0%, hsl(220, 10%, 12%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(220, 15%, 8% / 0.9) 0%, hsl(220, 10%, 10% / 0.8) 100%);
+    --gradient-overlay: linear-gradient(0deg, hsl(220, 15%, 95% / 0.8) 0%, transparent 100%);
+
+    --shadow-soft: 0 4px 20px hsl(0, 0%, 0% / 0.3);
+    --shadow-medium: 0 8px 30px hsl(0, 0%, 0% / 0.4);
+    --shadow-strong: 0 15px 40px hsl(0, 0%, 0% / 0.5);
+    --shadow-glow: 0 0 30px hsl(220, 85%, 65% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* ✅ DARK MODE PALETTE OVERRIDES */
+    --color-primary: #60a5fa;
+    --color-primary-hover: #3b82f6;
+    --color-primary-active: #2563eb;
+    --color-secondary: #374151;
+    --color-secondary-hover: #4b5563;
+    
+    --color-background: #111827;
+    --color-card-background: #1f2937;
+    --color-header-background: #111827;
+    --color-overlay-background: rgba(255, 255, 255, 0.1);
+    
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted: #9ca3af;
+    --color-text-inverse: #111827;
+    
+    --color-border: #374151;
+    --color-border-hover: #4b5563;
+    --color-link: #60a5fa;
+    --color-link-hover: #93c5fd;
+    
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-error: #f87171;
+    --color-info: #22d3ee;
+    
+    --color-image-background: #1f2937;
+    --color-lightbox-overlay: rgba(0, 0, 0, 0.95);
+    --color-badge-background: #374151;
+    --color-highlight-color: #fcd34d;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ✅ PALETTE EDITOR UTILITY CLASSES */
+@layer utilities {
+  /* Theme-able backgrounds */
+  .bg-theme-primary { background-color: var(--color-primary); }
+  .bg-theme-secondary { background-color: var(--color-secondary); }
+  .bg-theme-background { background-color: var(--color-background); }
+  .bg-theme-card { background-color: var(--color-card-background); }
+  .bg-theme-header { background-color: var(--color-header-background); }
+
+  /* Theme-able text colors */
+  .text-theme-primary { color: var(--color-text-primary); }
+  .text-theme-secondary { color: var(--color-text-secondary); }
+  .text-theme-muted { color: var(--color-text-muted); }
+  .text-theme-inverse { color: var(--color-text-inverse); }
+
+  /* Theme-able borders */
+  .border-theme { border-color: var(--color-border); }
+  .border-theme-hover:hover { border-color: var(--color-border-hover); }
+
+  /* Theme-able links */
+  .link-theme { color: var(--color-link); }
+  .link-theme:hover { color: var(--color-link-hover); }
+
+  /* Button variants */
+  .btn-theme-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border: 1px solid var(--color-primary);
+  }
+  .btn-theme-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+  .btn-theme-primary:active {
+    background-color: var(--color-primary-active);
+    border-color: var(--color-primary-active);
+  }
+
+  .btn-theme-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+  }
+  .btn-theme-secondary:hover {
+    background-color: var(--color-secondary-hover);
+    border-color: var(--color-border-hover);
+  }
+
+  /* Status colors */
+  .text-theme-success { color: var(--color-success); }
+  .text-theme-warning { color: var(--color-warning); }
+  .text-theme-error { color: var(--color-error); }
+  .text-theme-info { color: var(--color-info); }
+
+  .bg-theme-success { background-color: var(--color-success); }
+  .bg-theme-warning { background-color: var(--color-warning); }
+  .bg-theme-error { background-color: var(--color-error); }
+  .bg-theme-info { background-color: var(--color-info); }
+
+  /* Gallery specific */
+  .bg-theme-image { background-color: var(--color-image-background); }
+  .bg-theme-badge { background-color: var(--color-badge-background); }
+  .bg-theme-highlight { background-color: var(--color-highlight-color); }
+  
+  /* Overlay styles */
+  .overlay-theme { background-color: var(--color-overlay-background); }
+  .lightbox-theme { background-color: var(--color-lightbox-overlay); }
+}
+
+/* ✅ CUSTOM COMPONENT STYLES */
+@layer components {
+  /* Image card with theme support */
+  .image-card {
+    @apply bg-theme-card border-theme rounded-lg shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* Header with theme support */
+  .app-header {
+    @apply bg-theme-header border-b border-theme text-theme-primary;
+  }
+
+  /* Navigation links */
+  .nav-link {
+    @apply link-theme hover:text-theme-primary transition-colors duration-200;
+  }
+
+  /* Form inputs with theme */
+  .form-input {
+    @apply bg-theme-background border-theme text-theme-primary placeholder:text-theme-muted;
+  }
+  .form-input:focus {
+    @apply ring-2 ring-opacity-50 border-theme-hover;
+    ring-color: var(--color-primary);
+  }
+
+  /* Modal and overlay */
+  .modal-overlay {
+    @apply lightbox-theme backdrop-blur-sm;
+  }
+
+  .modal-content {
+    @apply bg-theme-card border-theme text-theme-primary;
+  }
+}
