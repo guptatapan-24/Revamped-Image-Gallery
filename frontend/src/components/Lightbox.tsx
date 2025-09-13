@@ -317,14 +317,14 @@ export const Lightbox = ({
           {isEditing ? (
             <h2 className="text-xl font-bold text-white">Edit Image</h2>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-1 min-w-0">
               <h2 className="text-xl font-bold text-white truncate pr-4">{image.title}</h2>
               {isAI && (
                 <Sparkles className="h-5 w-5 text-purple-400 flex-shrink-0" />
               )}
             </div>
           )}
-          <div className="flex space-x-2 flex-shrink-0">
+          <div className="flex space-x-2 flex-shrink-0 ml-4">
             <Button
               variant="ghost"
               size="icon"
