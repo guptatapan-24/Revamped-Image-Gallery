@@ -9,11 +9,35 @@ A modern, professional image gallery platform built for **CloneFest 2025** — t
 
 ---
 
+## 📷 Screenshots
+
+### 1
+(https://drive.google.com/file/d/1DXyrOjQT6lw4uTfkO-VRp-_xgPO2pioj/view?usp=drive_link)
+
+### 2
+(https://drive.google.com/file/d/1RHJTHcwHcRdLYogXyhnhIMOW0GHaDRVJ/view?usp=drive_link)
+
+### 3
+(https://drive.google.com/file/d/15uN0osmfRGU1YNbAw-whdRX_lEDrWoZf/view?usp=drive_link)
+
+### 4
+(https://drive.google.com/file/d/1gC7X6suPF64U1DQw9dqNpv1l-kmRSHDX/view?usp=drive_link)
+
+### 5
+(https://drive.google.com/file/d/1TmFMM5dX0_P30Ggsg8g4ouC2jlHGubWk/view?usp=drive_link)
+
+### 6
+(https://drive.google.com/file/d/1BIFR4QnLhL2JwvAa75CTluKB1oSoZBzq/view?usp=drive_link)
+
+
+---
+
 ## 🌟 Live Demo
 🔗 Production: [revamped-image-gallery.vercel.app](https://revamped-image-gallery.vercel.app)
 
+
 ---
----
+
 
 ## 🌟 Demo Video
 🔗 Link: (https://drive.google.com/file/d/1XnWwjBVKtBK9mgK9Citog_pmX33xmSVw/view?usp=drive_link)
