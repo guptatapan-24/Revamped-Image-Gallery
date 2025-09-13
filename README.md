@@ -41,7 +41,6 @@ A modern, professional image gallery platform built for **CloneFest 2025** — t
 ✅ Professional Lightbox — Keyboard controls, captions, zoom/pan  
 ✅ Real-time Analytics — View counts, engagement metrics, user tracking  
 ✅ Batch Operations — Bulk upload, delete, metadata editing, album management  
-✅ Social Features — Comments, likes, sharing with spam protection  
 ✅ Advanced Downloads — Watermark integration, signed URLs, bulk download  
 
 ### 🚀 Bonus Features
@@ -95,8 +94,7 @@ npm install
 ```env
 VITE_SUPABASE_URL=your-supabase-project-url
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-VITE_SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-VITE_AI_API_KEY=your-stable-diffusion-api-key
+VITE_STABILITY_API_KEY=your-stability-api-key
 ```
 
 4. **Database Setup** — run in Supabase SQL editor
@@ -164,12 +162,6 @@ cp .env.example .env
 npm run dev
 ```
 
-**Docker**
-```bash
-docker build -t revamped-gallery .
-docker run -p 5173:5173 --env-file .env revamped-gallery
-```
-
 ---
 
 ## 📁 Project Structure
@@ -217,9 +209,7 @@ Revamped-Image-Gallery/
 ## 🎨 Bonus Features
 - **AI Image Generation** with Stable Diffusion  
 - **Advanced Controls** (seed, steps, CFG, sampler)  
-- **NSFW Detection** + moderation  
 - **Theme Editor** with WCAG compliance & per-user themes  
-- **Professional Analytics** (load times, behavior tracking)  
 
 ---
 
@@ -232,7 +222,7 @@ vercel --prod
 Add environment variables in Vercel dashboard:  
 - VITE_SUPABASE_URL  
 - VITE_SUPABASE_ANON_KEY  
-- VITE_SUPABASE_SERVICE_ROLE_KEY  
+- VITE_STABILITY_API_KEY
 
 Push → auto-deploy with previews for PRs.  
 
@@ -247,13 +237,12 @@ npm run preview
 ## 🏆 CloneFest 2025
 - ✅ Core requirements: complete  
 - ✅ Bonus A: AI Image Generation  
-- ✅ Bonus B: Color Palette System  
-- 🔄 Bonus C: Vector Search (in progress)  
+- ✅ Bonus B: Color Palette System    
 
 **Highlights**
 - Modern React + TS architecture  
 - Real-time analytics with PostgreSQL RPC  
-- AI integration with safety features  
+- AI integration  
 - Advanced theming + accessibility  
 
 ---
@@ -275,8 +264,8 @@ npm run preview
 
 **Contributors**
 - Tapan Gupta — Lead Developer  
-- Kathan1010 — Contributor  
-- lovable-dev[bot] — Automation  
+- Kathan1010 — Contributor
+- Dhruv Patel - Contributor
 
 ---
 
@@ -287,7 +276,6 @@ MIT License — see LICENSE file
 
 ## 🔗 Links
 🌐 [Live Demo](https://revamped-image-gallery.vercel.app)  
-📚 Documentation: `/docs`  
 🐛 [Issues](https://github.com/guptatapan-24/Revamped-Image-Gallery/issues)  
 💬 Discussions: GitHub Discussions  
 
