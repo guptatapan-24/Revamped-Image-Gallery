@@ -54,7 +54,7 @@ const AdminDashboard: React.FC = () => {
       title: "Theme Editor", 
       description: "Customize site appearance and branding", 
       icon: Palette,
-      href: "/palette-editor",
+      href: "/palette",
       color: "bg-pink-500"
     },
     { 
