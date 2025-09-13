@@ -45,7 +45,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { name: "My Profile", href: "/profile", icon: User, public: false },
     { name: "Upload Images", href: "/upload", icon: Upload, public: false },
     // { name: "Generate Image", href: "/generate-image", icon: Plus, public: false },
-    { name: "Palette Editor", href: "/palette-editor", icon: Palette, public: false },
+    { name: "Palette Editor", href: "/palette", icon: Palette, public: false },
   ];
 
   const adminNavigation = [
