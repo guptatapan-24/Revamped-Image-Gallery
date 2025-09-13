@@ -426,31 +426,25 @@ const Profile: React.FC = () => {
         )}
 
         {/* ✅ Stats Cards - WITH REAL DATA */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <Card className="text-center p-6">
-            <div className="text-blue-500 mb-2">
-              <Camera className="h-8 w-8 mx-auto" />
-            </div>
-            <div className="text-2xl font-bold">{stats.totalUploads}</div>
-            <div className="text-muted-foreground text-sm">Uploads</div>
-          </Card>
-          
-          <Card className="text-center p-6">
-            <div className="text-red-500 mb-2">
-              <Heart className="h-8 w-8 mx-auto" />
-            </div>
-            <div className="text-2xl font-bold">{stats.totalLikes.toLocaleString()}</div>
-            <div className="text-muted-foreground text-sm">Likes</div>
-          </Card>
-          
-          <Card className="text-center p-6">
-            <div className="text-blue-500 mb-2">
-              <Eye className="h-8 w-8 mx-auto" />
-            </div>
-            <div className="text-2xl font-bold">{stats.totalViews.toLocaleString()}</div>
-            <div className="text-muted-foreground text-sm">Views</div>
-          </Card>
-        </div>
+        <div className="grid grid-cols-3 gap-8 mb-8">
+  <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+    <Camera className="h-16 w-16 text-blue-500 mx-auto mb-6" />
+    <h3 className="text-4xl font-bold text-gray-900 mb-2">{stats.totalUploads}</h3>
+    <p className="text-gray-600 text-lg">Uploads</p>
+  </div>
+
+  <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+    <Heart className="h-16 w-16 text-red-500 mx-auto mb-6" />
+    <h3 className="text-4xl font-bold text-gray-900 mb-2">{stats.totalLikes}</h3>
+    <p className="text-gray-600 text-lg">Likes</p>
+  </div>
+
+  <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+    <Eye className="h-16 w-16 text-green-500 mx-auto mb-6" />
+    <h3 className="text-4xl font-bold text-gray-900 mb-2">{stats.totalViews}</h3>
+    <p className="text-gray-600 text-lg">Views</p>
+  </div>
+</div>
 
         {/* ✅ Recent Uploads Section - WITH REAL IMAGES */}
         <Card>
