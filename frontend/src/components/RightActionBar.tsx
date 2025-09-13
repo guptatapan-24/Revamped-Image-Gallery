@@ -1,8 +1,7 @@
 // src/components/RightActionBar.tsx - Fixed Keys
 import React, { useState } from "react";
 import { 
-  Heart, Share2, Download, Bookmark, MessageCircle, Eye,
-  Filter, Grid, List, Search, Plus
+  Heart, Share2, MessageCircle, Eye, Plus
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useAuth } from "../hooks/useAuth";
@@ -11,19 +10,12 @@ interface RightActionBarProps {
   totalLikes: number;
   totalViews: number;
   totalComments: number;
-  viewMode?: 'grid' | 'list';
-  onToggleView?: () => void;
-  onOpenFilter?: () => void;
-  onOpenSearch?: () => void;
   onLike?: () => void;
   onShare?: () => void;
-  onDownload?: () => void;
-  onBookmark?: () => void;
 }
 
 export const RightActionBar: React.FC<RightActionBarProps> = ({
-  totalLikes, totalViews, totalComments, viewMode = 'grid',
-  onToggleView, onOpenFilter, onOpenSearch, onLike, onShare, onDownload, onBookmark
+  totalLikes, totalViews, totalComments, onLike, onShare
 }) => {
   const { isAuthenticated } = useAuth();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -35,30 +27,6 @@ export const RightActionBar: React.FC<RightActionBarProps> = ({
   };
 
   const actions = [
-    {
-      id: 'search', // ✅ Add unique id
-      icon: Search,
-      label: "Search",
-      onClick: onOpenSearch,
-      show: true,
-      color: "hover:bg-blue-500 hover:text-white",
-    },
-    {
-      id: 'filter', // ✅ Add unique id
-      icon: Filter,
-      label: "Filter",
-      onClick: onOpenFilter,
-      show: true,
-      color: "hover:bg-purple-500 hover:text-white",
-    },
-    {
-      id: 'view-toggle', // ✅ Add unique id
-      icon: viewMode === 'grid' ? List : Grid,
-      label: viewMode === 'grid' ? 'List' : 'Grid',
-      onClick: onToggleView,
-      show: true,
-      color: "hover:bg-green-500 hover:text-white",
-    },
     {
       id: 'likes', // ✅ Add unique id
       icon: Heart,
@@ -93,22 +61,6 @@ export const RightActionBar: React.FC<RightActionBarProps> = ({
       show: true,
       color: "hover:bg-cyan-500 hover:text-white",
     },
-    {
-      id: 'bookmark', // ✅ Add unique id
-      icon: Bookmark,
-      label: "Save",
-      onClick: onBookmark,
-      show: isAuthenticated,
-      color: "hover:bg-yellow-500 hover:text-white",
-    },
-    {
-      id: 'download', // ✅ Add unique id
-      icon: Download,
-      label: "Download",
-      onClick: onDownload,
-      show: isAuthenticated,
-      color: "hover:bg-gray-700 hover:text-white",
-    }
   ];
 
   const visibleActions = actions.filter(action => action.show);
