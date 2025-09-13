@@ -17,7 +17,6 @@ interface UserStats {
   totalUploads: number;
   totalLikes: number;
   totalViews: number;
-  totalFollowers: number;
 }
 
 interface UserProfile {
@@ -42,7 +41,6 @@ const Profile: React.FC = () => {
     totalUploads: 0,
     totalLikes: 0,
     totalViews: 0,
-    totalFollowers: 0
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -171,23 +169,10 @@ const Profile: React.FC = () => {
       const totalViews = viewsData?.reduce((sum, img) => 
         sum + (img.view_count || 0), 0) || 0;
 
-      // Get followers count (fallback if no followers table)
-      let followersCount = 120; // Default fallback
-      try {
-        const { count } = await supabase
-          .from('followers')
-          .select('*', { count: 'exact', head: true })
-          .eq('following_id', userId);
-        followersCount = count || 120;
-      } catch (e) {
-        console.log('No followers table found, using default');
-      }
-
       const realStats = {
         totalUploads: uploadsCount || 0,
         totalLikes: totalLikes,
         totalViews: totalViews,
-        totalFollowers: followersCount
       };
 
       console.log('✅ Real user stats:', realStats);
@@ -200,7 +185,6 @@ const Profile: React.FC = () => {
         totalUploads: userImages.length,
         totalLikes: userImages.reduce((sum, img) => sum + (img.likes || 0), 0),
         totalViews: userImages.reduce((sum, img) => sum + (img.view_count || 0), 0),
-        totalFollowers: 120
       });
     }
   }, [userId, userImages]);
@@ -465,14 +449,6 @@ const Profile: React.FC = () => {
             </div>
             <div className="text-2xl font-bold">{stats.totalViews.toLocaleString()}</div>
             <div className="text-muted-foreground text-sm">Views</div>
-          </Card>
-          
-          <Card className="text-center p-6">
-            <div className="text-green-500 mb-2">
-              <Users className="h-8 w-8 mx-auto" />
-            </div>
-            <div className="text-2xl font-bold">{stats.totalFollowers}</div>
-            <div className="text-muted-foreground text-sm">Followers</div>
           </Card>
         </div>
 
