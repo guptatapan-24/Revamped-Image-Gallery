@@ -266,9 +266,7 @@ const Index: React.FC<IndexProps> = ({
                 <a href="/upload" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                   Upload Images
                 </a>
-                <a href="/vector-search" className="border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                  Advanced Search
-                </a>
+                
               </div>
             )}
           </div>
