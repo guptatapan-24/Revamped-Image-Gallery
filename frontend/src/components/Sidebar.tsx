@@ -21,12 +21,12 @@ interface SidebarProps {
 }
 
 const albums = [
-  { id: "all", name: "All Images", count: 2847 },
-  { id: "nature", name: "Nature Collection", count: 156 },
-  { id: "city", name: "City Life", count: 89 },
-  { id: "macro", name: "Macro World", count: 234 },
-  { id: "portraits", name: "Portraits", count: 178 },
-  { id: "architecture", name: "Architecture", count: 92 },
+  { id: "all", name: "All Images" },
+  { id: "nature", name: "Nature Collection" },
+  { id: "city", name: "City Life" },
+  { id: "macro", name: "Macro World" },
+  { id: "portraits", name: "Portraits" },
+  { id: "architecture", name: "Architecture" },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({ 
@@ -213,10 +213,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     }
                   `}
                 >
-                  <span>{album.name}</span>
-                  <Badge variant="secondary" className="text-xs">
-                    {album.count}
-                  </Badge>
+                  {album.name}
                 </button>
               ))}
             </div>
